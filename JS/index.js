@@ -1,3 +1,5 @@
+const history = [];
+
 // card-1
 
 document.getElementById('donate-btn-noakhali').addEventListener('click',function(){
@@ -18,9 +20,15 @@ document.getElementById('donate-btn-noakhali').addEventListener('click',function
     else{
         document.getElementById('noakhali-balance').innerText = totalAmount;
         document.getElementById('myBalance').innerText = myAfterBalance;
-
-
     }
+
+    const noakhali ={
+        title:`${inputValue} Taka is Donated for Flood at Noakhali, Bangladesh`,
+        date: new Date()
+    }
+
+    history.push(noakhali);
+
 })
 
 
@@ -48,6 +56,13 @@ document.getElementById('donate-btn-feni').addEventListener('click',function(){
 
 
     }
+
+    const feni ={
+        title:`${inputValue} Taka is Donated for Flood Relief in Feni,Bangladesh`,
+        date: new Date()
+    }
+
+    history.push(feni);
 })
 
 
@@ -75,8 +90,49 @@ document.getElementById('donate-btn-qouta').addEventListener('click',function(){
 
 
     }
+
+    const qouta ={
+        title:`${inputValue} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh`,
+        date: new Date()
+    }
+
+    history.push(qouta);
 })
 
-document.getElementById('btn-donation').addEventListener('click',function(){
+// history button
+document.getElementById('history').addEventListener('click',function(){
+
+    document.getElementById('history').classList.add('bg-[#B4F461]');
+           
+    document.getElementById('btn-donation').classList.remove('bg-[#B4F461]');
     
+    document.getElementById('donation-section').classList.add('hidden');
+    document.getElementById('history-section').classList.remove('hidden');
+    historyShow();
 })
+
+
+// donation button
+document.getElementById('btn-donation').addEventListener('click',function(){
+    document.getElementById('history').classList.remove('bg-[#B4F461]');
+           
+    document.getElementById('btn-donation').classList.add('bg-[#B4F461]');
+
+    document.getElementById('donation-section').classList.remove('hidden');
+    document.getElementById('history-section').classList.add('hidden');
+})
+
+
+function historyShow(){
+    for(let j = 0; j < history.length; j++){
+        const div = document.createElement('div');
+        div.innerHTML = `
+          <div class="my-4 p-8 border-[1px] border-gray-200 rounded-lg w-[100%] ">
+                <p class="mb-4 font-bold text-black text-[20px]">${history[j].title}</p>
+                <p class="font-light text-[#585858] ">${history[j].date}</p>
+          </div>
+        `;
+        document.getElementById('history-container').appendChild(div);
+    }
+}
+
