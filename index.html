@@ -30,6 +30,7 @@
         <div class="bg-[#F9F7F3]">
           <div class="max-w-7xl flex justify-between mx-auto py-6">
             <button
+              id="blog-btn"
               class="btn bg-[#B4F461] px-8 text-xl font-semibold text-[#111111]"
             >
               Blog
@@ -51,14 +52,14 @@
           <!-- donate button -->
           <button
             id="btn-donation"
-            class="btn bg-[#B4F461] hover:bg-[#B4F461] mr-3 px-8 text-xl font-semibold text-[#111111] pb-[1px]"
+            class="btn bg-[#B4F461]  mr-3 px-8 text-xl font-semibold text-[#111111] pb-[1px]"
           >
             Donation
           </button>
           <!-- history button -->
           <button
             id="history"
-            class="btn hover:bg-[#B4F461] border border-[#B8B8B8] px-8 text-xl font-semibold text-[#585858] pb-[1px]"
+            class="btn  border border-[#B8B8B8] px-8 text-xl font-semibold text-[#585858] pb-[1px]"
           >
             History
           </button>
@@ -80,7 +81,7 @@
                 />
               </div>
               <div class="lg:w-[48%]">
-                <div class=" flex items-center gap-1 mb-6">
+                <div class="flex items-center gap-1 mb-6">
                   <img class="w-[20px]" src="images/coin.png" alt="" />
                   <p id="noakhali-balance">10000</p>
                   <p>BDT</p>
@@ -104,10 +105,9 @@
                   class="input input-bordered w-[100%] p-7 mb-8"
                 />
 
-
                 <button
                   id="donate-btn-noakhali"
-                  class="btn bg-[#B4F461] w-full mr-3 text-xl font-semibold text-[#111111] "
+                  class="btn bg-[#B4F461] w-full mr-3 text-xl font-semibold text-[#111111]"
                 >
                   Donate Now
                 </button>
@@ -129,7 +129,7 @@
                 />
               </div>
               <div class="lg:w-[48%]">
-                <div class=" flex items-center gap-1 mb-6">
+                <div class="flex items-center gap-1 mb-6">
                   <img class="w-[20px]" src="images/coin.png" alt="" />
                   <p id="feni-balance">6000</p>
                   <p>BDT</p>
@@ -157,7 +157,7 @@
 
                 <button
                   id="donate-btn-feni"
-                  class="btn bg-[#B4F461] w-full mr-3 text-xl font-semibold text-[#111111] "
+                  class="btn bg-[#B4F461] w-full mr-3 text-xl font-semibold text-[#111111]"
                 >
                   Donate Now
                 </button>
@@ -179,7 +179,7 @@
                 />
               </div>
               <div class="lg:w-[48%]">
-                <button class=" flex items-center gap-1 mb-6">
+                <button class="flex items-center gap-1 mb-6">
                   <img class="w-[20px]" src="images/coin.png" alt="" />
                   <p id="qouta-balance">7500</p>
                   <p>BDT</p>
@@ -207,8 +207,8 @@
                 />
 
                 <button
-                id="donate-btn-qouta"
-                class="btn bg-[#B4F461] w-full mr-3 text-xl font-semibold text-[#111111] "
+                  id="donate-btn-qouta"
+                  class="btn bg-[#B4F461] w-full mr-3 text-xl font-semibold text-[#111111]"
                 >
                   Donate Now
                 </button>
@@ -217,15 +217,38 @@
           </div>
         </div>
       </section>
+      <!-- history section -->
       <section id="history-section" class="hidden">
-        <div id="history-container" class="max-w-7xl mx-auto">
-
-
-        </div>
+        <div id="history-container" class="max-w-7xl mx-auto"></div>
       </section>
+
+      <!-- Open the modal using ID.showModal() method -->
+      <!-- <button class="btn" onclick="success_modal.showModal()">open modal</button> -->
+      <dialog id="success_modal" class="modal">
+        <div class="modal-box text-center">
+          <h3 class="text-4xl font-bold">congrats!</h3>
+          <div>
+            <img class="mx-auto mt-4" src="images/coin.png" alt="" />
+          </div>
+
+          <p class="py-4 font-light text-[#585858]">
+            You Have Donated for Humankind
+          </p>
+          <h3 class="text-lg font-bold">Successfully</h3>
+          <div class="modal-action justify-center">
+            <form method="dialog">
+              <!-- if there is a button in form, it will close the modal -->
+              <div>
+                <button class="btn">Close confirmation</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </dialog>
     </main>
     <footer></footer>
 
     <script src="JS/index.js"></script>
+    <script src="JS/utilitie.js"></script>
   </body>
 </html>

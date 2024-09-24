@@ -3,8 +3,10 @@ const history = [];
 // card-1
 
 document.getElementById('donate-btn-noakhali').addEventListener('click',function(){
+
     
-    const noakhaliAmountInput = document.getElementById('input-noakhali').value ;
+    
+    const noakhaliAmountInput = getInputFieldById('input-noakhali') ;
     const inputValue = parseFloat(noakhaliAmountInput);
 
     const noakhaliBalanceElement = document.getElementById('noakhali-balance').innerText;
@@ -22,6 +24,8 @@ document.getElementById('donate-btn-noakhali').addEventListener('click',function
         document.getElementById('myBalance').innerText = myAfterBalance;
     }
 
+    document.getElementById('success_modal').showModal();
+
     const noakhali ={
         title:`${inputValue} Taka is Donated for Flood at Noakhali, Bangladesh`,
         date: new Date()
@@ -37,7 +41,7 @@ document.getElementById('donate-btn-noakhali').addEventListener('click',function
 
 document.getElementById('donate-btn-feni').addEventListener('click',function(){
     
-    const feniAmountInput = document.getElementById('input-feni').value ;
+    const feniAmountInput = getInputFieldById('input-feni') ;
     const inputValue = parseFloat(feniAmountInput);
 
     const feniBalanceElement = document.getElementById('feni-balance').innerText;
@@ -57,6 +61,8 @@ document.getElementById('donate-btn-feni').addEventListener('click',function(){
 
     }
 
+    document.getElementById('success_modal').showModal();
+
     const feni ={
         title:`${inputValue} Taka is Donated for Flood Relief in Feni,Bangladesh`,
         date: new Date()
@@ -71,7 +77,7 @@ document.getElementById('donate-btn-feni').addEventListener('click',function(){
 
 document.getElementById('donate-btn-qouta').addEventListener('click',function(){
     
-    const qoutaAmountInput = document.getElementById('input-qouta').value ;
+    const qoutaAmountInput = getInputFieldById('input-qouta') ;
     const inputValue = parseFloat(qoutaAmountInput);
 
     const qoutaBalanceElement = document.getElementById('qouta-balance').innerText;
@@ -90,6 +96,8 @@ document.getElementById('donate-btn-qouta').addEventListener('click',function(){
 
 
     }
+
+    document.getElementById('success_modal').showModal();
 
     const qouta ={
         title:`${inputValue} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh`,
@@ -135,4 +143,11 @@ function historyShow(){
         document.getElementById('history-container').appendChild(div);
     }
 }
+
+
+document.getElementById('blog-btn').addEventListener('click',function(){
+    console.log('akjdfhlkajfmk');
+
+    window.location.href ='/blog.html';
+})
 
