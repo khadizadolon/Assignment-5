@@ -28,27 +28,39 @@
     <header class="sticky top-0 backdrop-blur-xl z-10">
       <nav>
         <div class="bg-[#F9F7F3]">
-          <div class="max-w-7xl flex justify-between mx-auto py-6">
-            <button
+
+          <!-- responsive donate bangladesh div -->
+          <div class="flex justify-center pt-4 items-center gap-3 lg:hidden">
+            <img class="w-[40px]" src="images/logo.png" alt="" />
+            <p class="text-xl font-semibold text-[#111111]">
+              Donate Bangladesh
+            </p>
+          </div>
+          <!-- responsive donate bangladesh div -->
+
+          <div class="max-w-7xl lg:flex justify-between mx-auto py-6 ">
+            <div class="flex justify-center lg:mb-0 mb-3">
+              <button
               id="blog-btn"
-              class="btn bg-[#B4F461] px-8 text-xl font-semibold text-[#111111]"
+              class="btn w-[80%] bg-[#B4F461] px-8 text-xl font-semibold text-[#111111]"
             >
               Blog
             </button>
-            <div class="flex items-center gap-3">
+            </div>
+            <div class="lg:flex hidden items-center gap-3">
               <img class="w-[40px]" src="images/logo.png" alt="" />
               <p class="text-xl font-semibold text-[#111111]">
                 Donate Bangladesh
               </p>
             </div>
-            <div class="flex items-center gap-2">
+            <div class="flex items-center justify-center gap-2">
               <img class="w-[20px]" src="images/coin.png" alt="" />
               <p id="myBalance">15000</p>
               <p>BDT</p>
             </div>
           </div>
         </div>
-        <div class="flex justify-center mt-[80px] pb-10">
+        <div class="flex justify-center lg:mt-[80px] mt-7 pb-10">
           <!-- donate button -->
           <button
             id="btn-donation"
@@ -65,16 +77,17 @@
           </button>
         </div>
       </nav>
-    </header>
+    </header>  
+
     <main>
       <section id="donation-section">
         <!-- card-1 -->
         <div
-          class="max-w-7xl mx-auto mb-6 bg-white border border-stone-300 bottom-[1px] rounded-2xl"
+          class="max-w-7xl mx-auto mb-6  bg-white border border-stone-300 bottom-[1px] rounded-2xl"
         >
           <div class="hero bg-white">
             <div class="hero-content flex-col lg:flex-row space-x-6 p-8">
-              <div class="w-[48%]">
+              <div class="lg:w-[48%]">
                 <img
                   src="images/noakhali.png"
                   class="rounded-lg shadow-2xl w-[100%]"
@@ -122,7 +135,7 @@
         >
           <div class="hero bg-white">
             <div class="hero-content flex-col lg:flex-row space-x-6 p-8">
-              <div class="w-[48%]">
+              <div class="lg:w-[48%]">
                 <img
                   src="images/feni.png"
                   class="rounded-lg shadow-2xl w-[100%]"
@@ -172,7 +185,7 @@
         >
           <div class="hero bg-white">
             <div class="hero-content flex-col lg:flex-row space-x-6 p-8">
-              <div class="w-[48%]">
+              <div class="lg:w-[48%]">
                 <img
                   src="images/quota-protest.png"
                   class="rounded-lg shadow-2xl w-[100%]"
@@ -223,7 +236,6 @@
       </section>
 
       <!-- Open the modal using ID.showModal() method -->
-      <!-- <button class="btn" onclick="success_modal.showModal()">open modal</button> -->
       <dialog id="success_modal" class="modal">
         <div class="modal-box text-center">
           <h3 class="text-4xl font-bold">congrats!</h3>
@@ -246,7 +258,9 @@
         </div>
       </dialog>
     </main>
-    <footer></footer>
+    <footer class="bg-[#F9F7F3] lg:py-16 lg:mt-20 ">
+
+    </footer>
 
     <script src="JS/index.js"></script>
     <script src="JS/utilitie.js"></script>

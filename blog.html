@@ -28,20 +28,31 @@
     <header class="sticky top-0 backdrop-blur-xl z-10">
         <nav>
           <div class="bg-[#F9F7F3]">
-            <div class="max-w-7xl flex justify-between mx-auto py-6">
-              <button
-                id="home-button"
-                class="btn bg-[#B4F461] px-8 text-xl font-semibold text-[#111111]"
-              >
-                Home
-              </button>
-              <div class="flex items-center gap-3">
+
+            <!-- responsive donate bangladesh div -->
+          <div class="flex justify-center pt-4 items-center gap-3 lg:hidden">
+            <img class="w-[40px]" src="images/logo.png" alt="" />
+            <p class="text-xl font-semibold text-[#111111]">
+              Donate Bangladesh
+            </p>
+          </div>
+          <!-- responsive donate bangladesh div -->
+            <div class="max-w-7xl lg:flex justify-between mx-auto py-6">
+                <div class="flex justify-center lg:mb-0 mb-3">
+                    <button
+                    id="home-button"
+                    class="btn w-[80%] bg-[#B4F461] px-8 text-xl font-semibold text-[#111111]"
+                  >
+                    Home
+                  </button>
+                </div>
+              <div class="lg:flex hidden items-center gap-3">
                 <img class="w-[40px]" src="images/logo.png" alt="" />
                 <p class="text-xl font-semibold text-[#111111]">
                   Donate Bangladesh
                 </p>
               </div>
-              <div class="flex items-center gap-2">
+              <div class="flex items-center justify-center gap-2">
                 <img class="w-[20px]" src="images/coin.png" alt="" />
                 <p id="myBalance">15000</p>
                 <p>BDT</p>
@@ -67,7 +78,7 @@
         </nav>
     </header>
     <main class="max-w-7xl mx-auto">
-        <h1 class="text-[#111111] lg:mb-10 lg:mt-12 font-extrabold text-4xl flex items-center gap-2">
+        <h1 class="text-[#111111] lg:justify-start justify-center lg:mb-10 mb-5 lg:mt-12 mt-7 font-extrabold lg:text-4xl text-3xl flex items-center gap-2">
             <span>Important FAQ</span>
             <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-12 inline">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z" />
