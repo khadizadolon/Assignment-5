@@ -154,6 +154,6 @@ function historyShow(){
 document.getElementById('blog-btn').addEventListener('click',function(){
     console.log('akjdfhlkajfmk');
 
-    window.location.href ='/blog.html';
+    window.location.href =`/Assignment-5/blog.html`;
 })
 
