@@ -15,7 +15,7 @@ document.getElementById('donate-btn-noakhali').addEventListener('click',function
 
     const myBalance = parseFloat(document.getElementById("myBalance").innerText);
     const myAfterBalance = myBalance - inputValue;
-    if(isNaN (inputValue)  || inputValue <= 0 ){
+    if(isNaN (inputValue)  || inputValue <= 0 || inputValue > myBalance){
         alert('Enter a valid number')
         return;
     }
@@ -50,7 +50,7 @@ document.getElementById('donate-btn-feni').addEventListener('click',function(){
 
     const myBalance = parseFloat(document.getElementById("myBalance").innerText);
     const myAfterBalance = myBalance - inputValue;
-    if(isNaN (inputValue)  || inputValue <= 0 ){
+    if(isNaN (inputValue)  || inputValue <= 0 || inputValue > myBalance){
         alert('Enter a valid number')
         return;
     }
@@ -86,7 +86,7 @@ document.getElementById('donate-btn-qouta').addEventListener('click',function(){
 
     const myBalance = parseFloat(document.getElementById("myBalance").innerText);
     const myAfterBalance = myBalance - inputValue;
-    if(isNaN (inputValue)  || inputValue <= 0 ){
+    if(isNaN (inputValue)  || inputValue <= 0 || inputValue > myBalance){
         alert('Enter a valid number')
         return;
     }
@@ -116,6 +116,10 @@ document.getElementById('history').addEventListener('click',function(){
     
     document.getElementById('donation-section').classList.add('hidden');
     document.getElementById('history-section').classList.remove('hidden');
+
+    document.getElementById('footer').classList.add('hidden');
+
+
     historyShow();
 })
 
@@ -128,6 +132,8 @@ document.getElementById('btn-donation').addEventListener('click',function(){
 
     document.getElementById('donation-section').classList.remove('hidden');
     document.getElementById('history-section').classList.add('hidden');
+
+    document.getElementById('footer').classList.remove('hidden');
 })
 
 
