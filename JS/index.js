@@ -118,6 +118,7 @@ document.getElementById('history').addEventListener('click',function(){
     document.getElementById('history-section').classList.remove('hidden');
 
     document.getElementById('footer').classList.add('hidden');
+    document.getElementById('history-section').classList.remove('hidden');
 
 
     historyShow();
@@ -154,6 +155,6 @@ function historyShow(){
 document.getElementById('blog-btn').addEventListener('click',function(){
     console.log('akjdfhlkajfmk');
 
-    window.location.href =`/Assignment-5/blog.html`;
+    window.location.href ='/blog.html';
 })
 
