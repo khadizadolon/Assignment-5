@@ -9,11 +9,11 @@ document.getElementById('donate-btn-noakhali').addEventListener('click',function
     const noakhaliAmountInput = getInputFieldById('input-noakhali') ;
     const inputValue = parseFloat(noakhaliAmountInput);
 
-    const noakhaliBalanceElement = document.getElementById('noakhali-balance').innerText;
+    const noakhaliBalanceElement = getTextById('noakhali-balance');
     const mainBalance = parseFloat(noakhaliBalanceElement);
     const totalAmount = mainBalance + inputValue;
 
-    const myBalance = parseFloat(document.getElementById("myBalance").innerText);
+    const myBalance = getTextById("myBalance");
     const myAfterBalance = myBalance - inputValue;
     if(isNaN (inputValue)  || inputValue <= 0 || inputValue > myBalance){
         alert('Enter a valid number')
@@ -44,11 +44,11 @@ document.getElementById('donate-btn-feni').addEventListener('click',function(){
     const feniAmountInput = getInputFieldById('input-feni') ;
     const inputValue = parseFloat(feniAmountInput);
 
-    const feniBalanceElement = document.getElementById('feni-balance').innerText;
+    const feniBalanceElement = getTextById('feni-balance');
     const mainBalance = parseFloat(feniBalanceElement);
     const totalAmount = mainBalance + inputValue;
 
-    const myBalance = parseFloat(document.getElementById("myBalance").innerText);
+    const myBalance = getTextById("myBalance");
     const myAfterBalance = myBalance - inputValue;
     if(isNaN (inputValue)  || inputValue <= 0 || inputValue > myBalance){
         alert('Enter a valid number')
@@ -80,11 +80,11 @@ document.getElementById('donate-btn-qouta').addEventListener('click',function(){
     const qoutaAmountInput = getInputFieldById('input-qouta') ;
     const inputValue = parseFloat(qoutaAmountInput);
 
-    const qoutaBalanceElement = document.getElementById('qouta-balance').innerText;
+    const qoutaBalanceElement = getTextById('qouta-balance');
     const mainBalance = parseFloat(qoutaBalanceElement);
     const totalAmount = mainBalance + inputValue;
 
-    const myBalance = parseFloat(document.getElementById("myBalance").innerText);
+    const myBalance = getTextById("myBalance");
     const myAfterBalance = myBalance - inputValue;
     if(isNaN (inputValue)  || inputValue <= 0 || inputValue > myBalance){
         alert('Enter a valid number')
